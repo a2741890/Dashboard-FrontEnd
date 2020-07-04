@@ -1,0 +1,17 @@
+.toolbarTag{
+  display: inline-block;
+  margin: 2px;
+}
+
+.toolbarTag:hover{
+  cursor: pointer;
+  background-color: rgb(255,249,231);
+  opacity: 0.5;
+}
+
+.selected{
+  background-color: rgb(255,249,231);
+  color: rgb(240, 185, 11);
+}
+
+

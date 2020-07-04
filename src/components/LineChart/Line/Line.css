@@ -1,0 +1,10 @@
+.line-segment{
+  background-color: blue;
+  bottom: calc(var(--y) - 5px);
+  left: var(--x);
+  height: 2px;
+  position: absolute;
+  width: calc(var(--hypotenuse) * 1px);
+  transform: rotate(calc(var(--angle) * -1rad));
+  transform-origin: left bottom;
+}

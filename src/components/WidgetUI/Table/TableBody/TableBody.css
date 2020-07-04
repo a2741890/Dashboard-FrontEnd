@@ -1,0 +1,34 @@
+.tableBody {
+  width: 100%;
+  max-height: 295px;
+  display: block;
+  overflow-y: scroll;
+}
+
+.tableBody .content {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: smaller;
+}
+
+.tableBody .content td {
+  margin: 4px;
+  width: 100%;
+  text-align: left;
+}
+
+.tableBody .content .negative {
+  color: red;
+  text-align: right;
+}
+
+.tableBody .content .positive {
+  color: green;
+  text-align: right;
+}
+
+.tableBody .content .volume {
+  width: 100%;
+  text-align: right;
+}

@@ -1,0 +1,14 @@
+.toolbarButton {
+  display: inline-block;
+  margin: 2px;
+}
+
+.selected {
+  color: rgb(240, 185, 11);
+  cursor: pointer;
+  background-color: rgb(255, 249, 231);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(243, 186, 47);
+  outline: 0px;
+}

@@ -1,0 +1,22 @@
+.tableHeader {
+  height: 10px;
+  display: table;
+  border-bottom: solid 1px black;
+}
+
+.tableHeader .content{
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-width: 270px;
+  font-size: smaller;
+}
+
+.tableHeader .content td{
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin-left: 15px;
+}
+
