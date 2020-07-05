@@ -25,9 +25,11 @@ const widgetUI = (props) => {
       pairAscending={props.pairAscending}
       priceAscending={props.priceAscending}
       changeAscending={props.changeAscending}
+      volumeAscending={props.volumeAscending}
       pairClick={props.pairClick}
       priceClick={props.priceClick}
       changeClick={props.changeClick}
+      volumeClick={props.volumeClick}
       clickType={props.clickType}
       toolbarClicked={props.toolbarClicked}
       showChange={props.showChange}

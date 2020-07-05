@@ -10,14 +10,18 @@ const table = (props) => {
         pairClick={props.pairClick}
         priceClick={props.priceClick}
         changeClick={props.changeClick}
+        volumeClick={props.volumeClick}
         pairAscending={props.pairAscending}
         priceAscending={props.priceAscending}
-        changeAscending={props.changeAscending}/>
+        changeAscending={props.changeAscending}
+        volumeAscending={props.volumeAscending}
+        showChange={props.showChange}/>
       <TableBody
         dataArr={props.dataArr}
         pairAscending={props.pairAscending}
         priceAscending={props.priceAscending}
         changeAscending={props.changeAscending}
+        volumeAscending={props.volumeAscending}
         clickType={props.clickType}
         toolbarClicked={props.toolbarClicked}
         showChange={props.showChange}

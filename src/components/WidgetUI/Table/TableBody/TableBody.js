@@ -19,6 +19,10 @@ const tableBody = (props) => {
       sortedDataArr = props.dataArr.sort((a, b) =>
         props.changeAscending ? a.change - b.change : b.change - a.change);
       break;
+    case 'volume':
+      sortedDataArr = props.dataArr.sort((a, b) =>
+        props.volumeAscending ? a.v - b.v : b.v - a.v);
+      break;
     default:
       sortedDataArr = props.dataArr.sort((a, b) =>
         props.pairAscending ? a.b.localeCompare(b.b) : b.b.localeCompare(a.b));
@@ -38,7 +42,7 @@ const tableBody = (props) => {
       data.symbol.toLowerCase()
         .includes(props.searchText.toLowerCase()));
   }
-
+  
   const content = sortedDataArr
     .map(data => {
       let changeType = "positive";
@@ -47,7 +51,7 @@ const tableBody = (props) => {
         ? <td className={changeType}>{data.change.toFixed(2)}％</td>
         : <td className="volume">{data.v.toFixed(0)}</td>;
       return (
-        <tr key={data.b+data.q} className="content">
+        <tr key={data.b + data.q} className="content">
           <td>{data.b + '/' + data.q}</td>
           <td>{data.price.toFixed(8).replace(/\.?0+$/, "")}</td>
           {changeORvolume}

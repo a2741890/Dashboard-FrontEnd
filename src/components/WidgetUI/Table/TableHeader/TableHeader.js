@@ -4,12 +4,14 @@ import Aux from '../../../../hoc/Aux/Aux';
 import './TableHeader.css';
 
 const tableHeader = (props) => {
-  const {pairAscending, priceAscending, changeAscending} = props;
-  const sortAscending = pairAscending || priceAscending || changeAscending;
+  const {pairAscending, priceAscending, changeAscending, volumeAscending} = props;
+  const sortAscending = pairAscending || priceAscending || changeAscending || volumeAscending;
   const sortImage = sortAscending
   ? <img src="https://img.icons8.com/android/10/000000/sort-up.png" alt="^"/>
   : <img src="https://img.icons8.com/android/10/000000/sort-down.png" alt="∨"/>;
-
+  const showType = props.showChange ? 'Change' : 'Volume';
+  const clickType = props.showChange ? props.changeClick : props.volumeClick;
+  const ascendingType = props.showChange ? changeAscending : volumeAscending;
   return <Aux >
     <thead className="tableHeader">
       <tr className="content">
@@ -22,8 +24,8 @@ const tableHeader = (props) => {
           {priceAscending !== null ? sortImage : null}
         </td>
         <td>
-          <ToolbarTag click={props.changeClick}>Change</ToolbarTag>
-          {changeAscending !== null ? sortImage : null}
+          <ToolbarTag click={clickType}>{showType}</ToolbarTag>
+          {ascendingType !== null ? sortImage : null}
         </td>
       </tr>
     </thead>

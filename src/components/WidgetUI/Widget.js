@@ -11,7 +11,8 @@ class Widget extends Component {
     dataArr: null,
     pairAscending: true,
     priceAscending: null,
-    chageAscending: null,
+    changeAscending: null,
+    volumeAscending: null,
     clickType: null,
     selectedBNB: false,
     selectedBTC: true,
@@ -114,6 +115,7 @@ class Widget extends Component {
       pairAscending: !this.state.pairAscending,
       priceAscending: null,
       changeAscending: null,
+      volumeAscending: null,
       clickType: 'pair'
     });
   }
@@ -123,6 +125,7 @@ class Widget extends Component {
       pairAscending: null,
       priceAscending: !this.state.priceAscending,
       changeAscending: null,
+      volumeAscending: null,
       clickType: 'price'
     });
   }
@@ -132,7 +135,18 @@ class Widget extends Component {
       pairAscending: null,
       priceAscending: null,
       changeAscending: !this.state.changeAscending,
+      volumeAscending: null,
       clickType: 'change'
+    });
+  }
+
+  volumeClickHandler = () => {
+    this.setState({
+      pairAscending: null,
+      priceAscending: null,
+      changeAscending: null,
+      volumeAscending: !this.state.volumeAscending,
+      clickType: 'volume'
     });
   }
 
@@ -209,9 +223,11 @@ class Widget extends Component {
         pairAscending={this.state.pairAscending}
         priceAscending={this.state.priceAscending}
         changeAscending={this.state.changeAscending}
+        volumeAscending={this.state.volumeAscending}
         pairClick={this.pairClickHandler}
         priceClick={this.priceClickHandler}
         changeClick={this.changeClickHandler}
+        volumeClick={this.volumeClickHandler}
         clickType={this.state.clickType}
         selectChangeALTS={this.selectALTSHandler}
         selectChangeFIAT={this.selectFIATHandler}
