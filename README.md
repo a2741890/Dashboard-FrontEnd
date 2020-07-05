@@ -5,6 +5,6 @@ Widget is completed, but there is still room for improvement. Other components a
 
 ![alt text](https://github.com/a2741890/Dashboard-FrontEnd/blob/master/dashboard.png?raw=true)
 
-
-[Crypto Widget Demo: ](https://www.youtube.com/watch?v=_zssCLPJ5jc)
-[Crypto Widget E2E TEST by Cypress: ](https://www.youtube.com/watch?v=N-x6gD2uqII)
+**Video Link**  
+[Crypto Widget Demo ](https://www.youtube.com/watch?v=_zssCLPJ5jc)  
+[Crypto Widget E2E TEST by Cypress ](https://www.youtube.com/watch?v=N-x6gD2uqII)
