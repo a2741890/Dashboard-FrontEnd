@@ -7,14 +7,14 @@ describe('Test to visit website', () => {
 
 describe('Check data loaded', () => {
   it('Data should be loaded to the widget', () => {
-    cy.visit('/');
+    // cy.visit('/');
     cy.get('.tableBody').its('length').should('be.gt', 0);
   })
 })
 
 describe('Button Test', () => {
   it('BTC button should be selected and category BTC is shown when the page is loaded', () => {
-    cy.visit('/');
+    // cy.visit('/');
     cy.get('.selected').contains('button', 'BTC');
     cy.get('.tableBody > tr').find(':nth-child(1)').each(($el, $index) => {
       cy.get($el).contains('BTC');
@@ -24,7 +24,7 @@ describe('Button Test', () => {
 
 describe('Button Click Test', () => {
   it('Click "BNB" button and show category BNB', () => {
-    cy.visit('/');
+    // cy.visit('/');
     cy.get('.toolbar > :nth-child(2)').click();
     cy.get('.selected').contains('button', 'BNB');
     cy.get('.selected').contains('button', 'BTC').should('not.exist');
@@ -36,7 +36,7 @@ describe('Button Click Test', () => {
 
 describe('Selection select Test', () => {
   it('Select "ALTS" selection and categories ETH, TRX and XRP are shown, and select ETH, TRX or XRP will show the respective category', () => {
-    cy.visit('/');
+    // cy.visit('/');
     cy.get(':nth-child(4) > select').select('ALTS');
     cy.get('.tableBody > tr').find(':nth-child(1)').each(($el, $index) => {
       cy.get($el).contains(/ETH|TRX|XRP/g);
@@ -58,7 +58,7 @@ describe('Selection select Test', () => {
 
 describe('Selection select Test', () => {
   it('Use "FIAT" selection and choose different options and table will show the respective category', () => {
-    cy.visit('/');
+    // cy.visit('/');
     cy.get(':nth-child(5) > select > option').each(($ele, $index) => {
       cy.get(':nth-child(5) > select').select($ele.text());
       cy.get('.tableBody > tr').find(':nth-child(1)').each(($el, $index) => {
@@ -91,7 +91,7 @@ describe('Searchbar Test', () => {
 
 describe('Radio button Test', () => {
   it('Radio button "Change" should be pre-checked and show change of the data when the page is loaded', () => {
-    cy.visit('/');
+    // cy.visit('/');
     cy.get(':nth-child(7) > .toolbarInput > input').should('have.attr', 'checked');
     cy.get(':nth-child(7) > .toolbarInput > input').should('be.checked');
     cy.get('.tableHeader > .content > :nth-child(3)').contains('div', 'Change');
@@ -100,7 +100,7 @@ describe('Radio button Test', () => {
 
 describe('Radio button Test', () => {
   it('Check radio button "Volume" and show volume of the data', () => {
-    cy.visit('/');
+    // cy.visit('/');
     cy.get(':nth-child(8) > .toolbarInput > input').click();
     cy.get(':nth-child(8) > .toolbarInput > input').should('be.checked');
     cy.get('.tableHeader > .content > :nth-child(3)').contains('div', 'Volume');
