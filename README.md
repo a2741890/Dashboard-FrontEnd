@@ -1,6 +1,8 @@
 This app is a dashboard to display information including memos, cryto information widget, and etc.
 Widget is completed, but there is still room for improvement. Other components are still under development.
 
+The brief structure of the front-end is:  
+![alt text](https://github.com/a2741890/Dashboard-FrontEnd/blob/master/structure.png?raw=true)
 **_Please go to src/components/WidgetUI to see the code of the crypto widget._**
 
 ![alt text](https://github.com/a2741890/Dashboard-FrontEnd/blob/master/widget.png?raw=true)
